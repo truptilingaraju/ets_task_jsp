@@ -13,6 +13,15 @@ public class Task {
 	private int id;
 	private String description;
 	
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", description=" + description + "]";
+	}
+	public Task(int id, String description) {
+		super();
+		this.id = id;
+		this.description = description;
+	}
 	public int getId() {
 		return id;
 	}
