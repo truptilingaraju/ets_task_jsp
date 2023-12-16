@@ -12,11 +12,9 @@ public class Task {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String description;
+	private String status;
 	
-	@Override
-	public String toString() {
-		return "Task [id=" + id + ", description=" + description + "]";
-	}
+	
 	public Task(int id, String description) {
 		super();
 		this.id = id;
@@ -34,9 +32,27 @@ public class Task {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public Task() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public Task(int id, String description, String status) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", description=" + description + ", status=" + status + "]";
 	}
 	
 	
