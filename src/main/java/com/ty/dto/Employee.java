@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Employee {
@@ -19,6 +20,7 @@ public class Employee {
 	private String role;
 	private int salaray;
 	
+	@OneToMany
 	private  List<Task> tasks;
 
 	public int getId() {
